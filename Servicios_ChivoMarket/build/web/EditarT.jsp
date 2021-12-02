@@ -60,7 +60,7 @@
 
             <div class="options__menu" id="excluyente" style="color:black;">	
 
-                <a href="Menu_Productos_Edit.jsp" class="selected">
+                <a href="Menu_Productos_Edit.jsp">
                     <div class="option">
                         <i class="fa fa-product-hunt" title="Todo para ti usuario promedio"></i>
                         <h4 style="color:salmon;">Productos</h4>
@@ -178,7 +178,7 @@
                             <div class="field">
                                 <label class="label">Numero</label>
                                 <div class="control">
-                                    <input class="form-control" name="txtNumero" type="text" value="<%=pros.getNumero()%>"  required>
+                                    <input class="form-control" name="txtNumero" type="tel" maxlength="8" minlength="8" value="<%=pros.getNumero()%>"  required>
                                 </div>
                             </div>
                             <div class="field">
