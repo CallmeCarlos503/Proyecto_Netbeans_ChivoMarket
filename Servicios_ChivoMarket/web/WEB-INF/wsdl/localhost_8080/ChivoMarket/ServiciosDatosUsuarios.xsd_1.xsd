@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Service/">
+
+<xs:element name="Registrarse" type="tns:Registrarse"/>
+
+<xs:element name="RegistrarseResponse" type="tns:RegistrarseResponse"/>
+
+<xs:element name="ValidarUsuario" type="tns:ValidarUsuario"/>
+
+<xs:element name="ValidarUsuarioResponse" type="tns:ValidarUsuarioResponse"/>
+
+<xs:element name="Verificar" type="tns:Verificar"/>
+
+<xs:element name="VerificarResponse" type="tns:VerificarResponse"/>
+
+<xs:complexType name="Registrarse">
+<xs:sequence>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RegistrarseResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Verificar">
+<xs:sequence>
+<xs:element name="Correo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="VerificarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="contrasena" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="ID_Rol" type="xs:int"/>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ValidarUsuario">
+<xs:sequence>
+<xs:element name="Correo" type="xs:string" minOccurs="0"/>
+<xs:element name="Contrasena" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ValidarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-ServiciosDatosUsuarios" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios" destdir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosDatosUsuarios/wsdl/localhost_8080/ChivoMarket/ServiciosDatosUsuarios.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ChivoMarket/ServiciosDatosUsuarios?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosDatosUsuarios/wsdl/localhost_8080/ChivoMarket/ServiciosDatosUsuarios.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiciosDatosUsuarios" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiciosDatosUsuarios"/>
+    </target>
+    <target name="wsimport-client-Servicios_Pedidos" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos" destdir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Servicios_Pedidos/wsdl/localhost_8080/ChivoMarket/Servicios_Pedidos.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ChivoMarket/Servicios_Pedidos?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Servicios_Pedidos/wsdl/localhost_8080/ChivoMarket/Servicios_Pedidos.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Servicios_Pedidos" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Servicios_Pedidos"/>
+    </target>
+    <target name="wsimport-client-ServiciosProductos" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiciosProductos"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiciosProductos" destdir="${build.generated.dir}/jax-wsCache/ServiciosProductos" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosProductos/wsdl/localhost_8080/ChivoMarket/ServiciosProductos.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ChivoMarket/ServiciosProductos?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosProductos/wsdl/localhost_8080/ChivoMarket/ServiciosProductos.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiciosProductos"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiciosProductos">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiciosProductos" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiciosProductos"/>
+    </target>
+    <target name="wsimport-client-Servicios_Ticket" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Servicios_Ticket"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Servicios_Ticket" destdir="${build.generated.dir}/jax-wsCache/Servicios_Ticket" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Servicios_Ticket/wsdl/localhost_8080/ChivoMarket/Servicios_Ticket.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ChivoMarket/Servicios_Ticket?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Servicios_Ticket/wsdl/localhost_8080/ChivoMarket/Servicios_Ticket.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Servicios_Ticket"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Servicios_Ticket">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Servicios_Ticket" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Servicios_Ticket"/>
+    </target>
+    <target name="wsimport-client-ServiciosTrabajador" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador" destdir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosTrabajador/wsdl/localhost_8080/ChivoMarket/ServiciosTrabajador.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ChivoMarket/ServiciosTrabajador?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ServiciosTrabajador/wsdl/localhost_8080/ChivoMarket/ServiciosTrabajador.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiciosTrabajador" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/service"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiciosTrabajador"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-ServiciosDatosUsuarios, wsimport-client-Servicios_Pedidos, wsimport-client-ServiciosProductos, wsimport-client-Servicios_Ticket, wsimport-client-ServiciosTrabajador"/>
+</project>
