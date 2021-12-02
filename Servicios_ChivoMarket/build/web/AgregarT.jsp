@@ -156,7 +156,7 @@
                              <div class="field">
                                 <label class="label">Telefono</label>
                                 <div class="control">
-                                    <input class="form-control" name="txtTelefono" type="tel"   required>
+                                    <input class="form-control" maxlength="8" minlength="8" name="txtTelefono" type="tel"   required>
                                 </div>
                             </div>
                              <div class="field">

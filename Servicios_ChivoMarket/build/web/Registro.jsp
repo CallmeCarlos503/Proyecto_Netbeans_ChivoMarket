@@ -117,7 +117,7 @@
                             <div class="field">
                                 <label class="label">Telefono</label>
                                 <div class="control">
-                                    <input class="form-control" type="tel"  name="txtTelefono" required placeholder="60004069">
+                                    <input class="form-control" type="tel" minlength="8" maxlength="8"  name="txtTelefono" required placeholder="60004069">
                                 </div>
                             </div>
 
