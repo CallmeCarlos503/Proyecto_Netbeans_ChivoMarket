@@ -60,7 +60,6 @@
                                     multiplicador = pe.getPrecio() * pe.getCantidad();
                                     
                                     suma=multiplicador+suma;
-
                             %>
                             <tr>
                                
