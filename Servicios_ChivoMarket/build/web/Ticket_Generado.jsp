@@ -62,9 +62,7 @@
                                     suma=multiplicador+suma;
                             %>
                             <tr>
-                               
                                 <td name="tdNombre"> <%=pe.getNombre()%></td>
-                                
                                 <td><%=pe.getPrecio()%></td>
                                 <td name="tdPrecio"> <%=pe.getCantidad()%></td>
                                 <td><%=ff.format(multiplicador)%></td>
@@ -74,12 +72,9 @@
                     </table>
                 </div>
                 <div class="col-2">
-
                 </div>
             </div>
         </div>
-
-
     </center>
     <br>
     <h3>
