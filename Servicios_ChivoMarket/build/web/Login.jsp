@@ -5,8 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
 <html lang="en" style="background-image: url(img/banner-bg.jpg);" >
     <head>
@@ -16,8 +14,6 @@
         <title>Bienvenido a ChivoMarket!</title>
         <link rel="stylesheet" href="css/ContenedorCarga.css">
         <link rel="stylesheet" href="css/bulma.css">
-
-
         <link href="css/alertify.css" rel="stylesheet" type="text/css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -25,82 +21,60 @@
         <script src="js/alertify.js" type="text/javascript"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <link rel="stylesheet" href="css/estilos.css">
-
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     </head>
     <body id="body">
-
-
-
         <div id="contenedor_carga"><div id="carga"></div></div>
-
-
-
         <header>
             <div class="icon__menu">
                 <i class="fas fa-bars" id="btn_open"></i>
             </div>
         </header>
-
         <div class="menu__side" id="menu_side">
-
             <div class="name__page">
                 <i class="fas fa-store"></i>
                 <h4>ChivoMarket</h4>
             </div>
-
             <div class="options__menu">	
-
                 <a href="Index.jsp">
                     <div class="option">
                         <i class="fas fa-home" title="Inicio"></i>
                         <h4>Inicio</h4>
                     </div>
                 </a>
-
                 <a href="" class="selected">
                     <div class="option">
                         <i class="far fa-user" title="Portafolio"></i>
                         <h4>Iniciar Sesion</h4>
                     </div>
                 </a>
-
                 <a href="Registro.jsp">
                     <div class="option">
                         <i class="fas fa-address-card" title="Cursos"></i>
                         <h4>Registrarse</h4>
                     </div>
                 </a>
-
                 <a href="AcercadeNosotros.jsp">
                     <div class="option">
                         <i class="far fa-sticky-note" title="Blog"></i>
                         <h4>Acerca de Nosotros</h4>
                     </div>
                 </a>
-
                 <a href="Zonas.jsp">
                     <div class="option">
                         <i class="fa fa-map-marker"  title="Contacto"></i>
                         <h4>Punto de referencias</h4>
                     </div>
                 </a>
-
-
-
             </div>
-
         </div>
-
         <main style="background-image: url(img/banner-bg.jpg);">
             <form action="Controlador" method="GET">
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-4">
-
                         </div>
                         <div class="col-4">
-
                             <center>
                                 <img src="img/Login.png" alt="">
                             </center>
@@ -110,7 +84,6 @@
                                     <input class="form-control" name="txtCorreo" type="email" placeholder="ChivoMarket@chivo.com" required>
                                 </div>
                             </div>
-
                             <div class="field">
                                 <label class="label">Contraseña</label>
                                 <div class="control">
@@ -118,7 +91,6 @@
                                 </div>
                             </div>
                             <div class="control">
-
                                 <button class="btn btn-success" id="btn1" type="submit" name="accion" value="Ingresar">
                                     Iniciar Sesion
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -127,12 +99,8 @@
                                     </svg>
                                 </button>
                             </div>
-
-
-
                         </div>
                         <div class="col-4">
-
                         </div>
                     </div>
                 </div>
@@ -141,37 +109,21 @@
                     if (session.getAttribute("Denego") == null) {
 
                     } else {
-
-
                 %>
                 <%                String msj = (String) session.getAttribute("Denego");
                     if (msj.equals("1")) {
-
-
                 %>
                 <script type="text/javascript">
-
                     swal("Que mal!", "Correo o contraseña mal colocada", "error");
-
                 </script>
                 <%                    session.setAttribute("Denego", null);
                 %>
-
                 <%                    }
                     }
                 %>
-
-
-
             </form>
-
         </main>    
-
-
-
         <script src="js/SistemaCarga.js"></script>
         <script src="js/script.js"></script>
-
-
     </body>
 </html>

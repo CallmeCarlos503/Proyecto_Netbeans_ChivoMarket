@@ -16,74 +16,55 @@
         <link rel="stylesheet" href="css/bulma.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
         <link rel="stylesheet" href="css/estilos.css">
-
         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     </head>
     <body id="body">
         <div id="contenedor_carga"><div id="carga"></div></div>
-
-
-
         <header>
             <div class="icon__menu">
                 <i class="fas fa-bars" id="btn_open"></i>
             </div>
         </header>
-
         <div class="menu__side" id="menu_side">
-
             <div class="name__page">
                 <i class="fas fa-store"></i>
                 <h4>ChivoMarket</h4>
             </div>
-
             <div class="options__menu">	
-
                 <a href="#" class="selected">
                     <div class="option">
                         <i class="fas fa-home" title="Inicio"></i>
                         <h4>Inicio</h4>
                     </div>
                 </a>
-
                 <a href="Controlador?accion=iniciar">
                     <div class="option">
                         <i class="far fa-user" title="Portafolio"></i>
                         <h4>Iniciar Sesion</h4>
                     </div>
                 </a>
-
                 <a href="Registro.jsp">
                     <div class="option">
                         <i class="fas fa-address-card" title="Cursos"></i>
                         <h4>Registrarse</h4>
                     </div>
                 </a>
-
                 <a href="AcercadeNosotros.jsp">
                     <div class="option">
                         <i class="far fa-sticky-note" title="Blog"></i>
                         <h4>Acerca de Nosotros</h4>
                     </div>
                 </a>
-
                 <a href="Zonas.jsp">
                     <div class="option">
                         <i class="fa fa-map-marker"  title="Contacto"></i>
                         <h4>Punto de referencias</h4>
                     </div>
                 </a>
-
-               
-
             </div>
-
         </div>
-
         <main style="background-image: url(img/banner-bg.jpg);">
-
             <section class="section is-medium" style="background-image: url(https://w0.peakpx.com/wallpaper/654/548/HD-wallpaper-rgb-rain.jpg); text-align: center;" >
                 <h1 class="title" style="color: white;">Chivo Market</h1>
                 <h2 class="subtitle" style="color: white;">
@@ -167,7 +148,6 @@
                     </div>
                 </div>
             </div>
-
         </main>
         <script src="js/SistemaCarga.js"></script>
         <script src="js/script.js"></script>
