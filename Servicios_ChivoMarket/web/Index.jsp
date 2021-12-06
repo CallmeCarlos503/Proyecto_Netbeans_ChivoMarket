@@ -53,7 +53,7 @@
                 <a href="AcercadeNosotros.jsp">
                     <div class="option">
                         <i class="far fa-sticky-note" title="Blog"></i>
-                        <h4>Acerca de</h4>
+                        <h4>Acerca de nosotros</h4>
                     </div>
                 </a>
                 <a href="Zonas.jsp">
