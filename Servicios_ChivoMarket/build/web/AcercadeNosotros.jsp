@@ -82,7 +82,25 @@
 
             </div>
             <br><br>
-           
+            <main>
+                <p>
+                <h1>MISION</h1>
+                <br>
+                Somos una empresa asociada a la venta dentro del mercado en concepto de la mercaderia y el pago efectivo
+                junto al moderno pago de cripto monedas, ademas, ser una empresa reconocida como tal en el Estado Salvadoreño 
+                como una de las mejores en el area del mercado, formados por el grupo TI de turno y el cariño de los productos
+                importados que aposteriori son pagados por nuestros clientes, siendo productos empaquetados y que en su mayoria
+                en liquidacion pero con la confianza de ser un producto nuevo e importado en el mercado.
+                </p>
+                <br>
+                <p>
+                    <h1>VISION</h1>
+                <br>
+                Una empresa reconocida como tal como las mejores en el area del mercado, formalizandose no solo en el estado Salvadoreño
+                sino, ser reconocido a nivel Centro Americano, como una de las mejores empresas de pago que contara con un servicio a domicilio
+                en un futuro en facilidad.
+                </p>
+            </main>
 
             <script src="js/SistemaCarga.js"></script>
             <script src="js/script.js"></script>
