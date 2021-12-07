@@ -195,7 +195,7 @@
             <h1>TOTAL A PAGAR: $<%=ff2.format(Total)%></h1> <br>
             <h4>ID DE REFERENCIA:<%=request.getParameter("txtID")%> </h4>
             <center>
-                <a class="btn btn-danger" href="Controlador?ID=<%=request.getParameter("txtID")%>&accion=Cancelar">CXancelar</a>
+                <a class="btn btn-danger" href="Controlador?ID=<%=request.getParameter("txtID")%>&accion=Cancelar">Cancelar</a>
                 <br><br>
 
                 <p uk-margin>
