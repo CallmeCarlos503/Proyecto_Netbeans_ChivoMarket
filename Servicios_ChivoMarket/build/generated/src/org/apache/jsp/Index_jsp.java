@@ -46,7 +46,7 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html lang=\"en\" style=\"background-image: url(img/banner-bg.jpg);\" >\n");
-      out.write("    <head>\n");
+      out.write("    <head> \n");
       out.write("        <meta charset=\"UTF-8\">\n");
       out.write("        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
@@ -92,7 +92,7 @@ public final class Index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <a href=\"AcercadeNosotros.jsp\">\n");
       out.write("                    <div class=\"option\">\n");
       out.write("                        <i class=\"far fa-sticky-note\" title=\"Blog\"></i>\n");
-      out.write("                        <h4>Acerca de Nosotros</h4>\n");
+      out.write("                        <h4>Acerca de nosotros</h4>\n");
       out.write("                    </div>\n");
       out.write("                </a>\n");
       out.write("                <a href=\"Zonas.jsp\">\n");

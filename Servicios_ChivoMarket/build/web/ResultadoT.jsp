@@ -194,11 +194,61 @@
             %>
             <h1>TOTAL A PAGAR: $<%=ff2.format(Total)%></h1> <br>
             <h4>ID DE REFERENCIA:<%=request.getParameter("txtID")%> </h4>
-            <a class="btn btn-danger" href="Controlador?ID=<%=request.getParameter("txtID")%>&accion=Cancelar">Cancelar</a>
-            <br><br>
-            <p uk-margin>
-                <a class="uk-button uk-button-default btn btn-secondary" href="#modal-media-image" uk-toggle>Generar Codigo</a>
-            </p>
+            <center>
+                <a class="btn btn-danger" href="Controlador?ID=<%=request.getParameter("txtID")%>&accion=Cancelar">CXancelar</a>
+                <br><br>
+
+                <p uk-margin>
+                    <a class="uk-button uk-button-default btn btn-secondary" href="#modal-media-image" uk-toggle>Generar Codigo</a>
+                </p>
+                <br>
+                <div id="smart-button-container">
+                    <div style="text-align: center;">
+                        <div id="paypal-button-container"></div>
+                    </div>
+                </div>
+                <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+                <script>
+                    function initPayPalButton() {
+                        paypal.Buttons({
+                            style: {
+                                shape: 'pill',
+                                color: 'blue',
+                                layout: 'vertical',
+                                label: 'pay',
+
+                            },
+
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{"amount": {"currency_code": "USD", "value": <%=Total%>}}]
+                                });
+                            },
+
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (orderData) {
+
+                                    // Full available details
+                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                                    // Show a success message within this page, e.g.
+                                    const element = document.getElementById('paypal-button-container');
+                                    element.innerHTML = '';
+                                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                                    // Or go to another URL:  actions.redirect('thank_you.html');
+
+                                });
+                            },
+
+                            onError: function (err) {
+                                console.log(err);
+                            }
+                        }).render('#paypal-button-container');
+                    }
+                    initPayPalButton();
+                </script>
+            </center>
             <br>
             <div id="modal-media-image" class="uk-flex-top " uk-modal>
                 <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
