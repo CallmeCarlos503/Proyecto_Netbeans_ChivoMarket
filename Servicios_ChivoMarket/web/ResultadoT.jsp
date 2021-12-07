@@ -162,6 +162,7 @@
                             DecimalFormat ff = new DecimalFormat("#.00");
                             double precio = ti.getPrecio();
                             ff.format(precio);
+                            String URL="";
                             multiplicador = ti.getPrecio() * ti.getCantidad();
                             List<Productos> pross = po.busquedaIDProducto(ti.getIDProducto());
                             for (Productos por : pross) {
@@ -194,12 +195,13 @@
             %>
             <h1>TOTAL A PAGAR: $<%=ff2.format(Total)%></h1> <br>
             <h4>ID DE REFERENCIA:<%=request.getParameter("txtID")%> </h4>
+           
             <center>
                 <a class="btn btn-danger" href="Controlador?ID=<%=request.getParameter("txtID")%>&accion=Cancelar">Cancelar</a>
                 <br><br>
 
                 <p uk-margin>
-                    <a class="uk-button uk-button-default btn btn-secondary" href="#modal-media-image" uk-toggle>Generar Codigo</a>
+                    <a class="btn btn-secondary" href="https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=%2012kQMUkB9QJu9X5JP9H9M2qMUmrGtDakkV?amount=<%=(Total*0.00001950)%>">Direccion QR</a>
                 </p>
                 <br>
                 <div id="smart-button-container">
@@ -250,12 +252,6 @@
                 </script>
             </center>
             <br>
-            <div id="modal-media-image" class="uk-flex-top " uk-modal>
-                <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                    <button class="uk-modal-close-outside" type="button" uk-close></button>
-                    <img src="img/qr-code.png" width="350" alt=""/>                   
-                </div>
-            </div>
         </div>
         <script src="js/BuscadorTabla.js" type="text/javascript"></script>
         <script src="js/SistemaCarga.js"></script>
