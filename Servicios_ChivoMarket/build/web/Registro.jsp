@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-4">
                             <div class="field">
-                                <label class="label">Nombre Completo</label>
+                                <label class="label">Nombre de pila</label>
                                 <div class="control">
                                     <input class="form-control" type="text" name="txtNombre" required placeholder="Juanito Alcachofa">
                                 </div>
